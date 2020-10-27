@@ -7,17 +7,23 @@
 ---------------------------------------------------
             text file           |           binary file
             notepad:            |   vlc, picaso, xlsx, pdf
-                             mode
+                               mode
 -----------------------------------------------------------------
         default = t
         default = r
-        # advanced = +
+        advanced = +
 
         rt : read               |   rb : read
         wt : write              |   wb : write
         at : append             |   ab : append    
+        ----------------------------------------
+        rt+ : read + write             |   rb+ : read
+        wt+ : write  + read  #           |   wb+ : write
+        at+ : append  + read          |   ab+ : append    
+
+
 -----------------------------------------------------------------
 
-r : 0  # 0123
+r+ : 0  # 0123
 w : 0
 a : end
